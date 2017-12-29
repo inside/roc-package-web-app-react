@@ -95,7 +95,7 @@ export default function createClient({
             history,
         };
         const createComponent = [(component) => component];
-        const createDevComponent = [(component) => component];
+        const createDevComponent = [(component) => <div>{component}</div>];
 
         if (HAS_REDUX_REDUCERS && createStore) {
             const { Provider } = require('react-redux');
